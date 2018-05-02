@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travel Agency</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/script.js"></script>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/home">Home</a></li>
+          <!--  <li role="presentation"><a href="#">Sign In</a></li>
+            <li role="presentation" class="active"><a href="#">Sign Up</a></li>-->
+          </ul>
+        </nav>
+        <h3 class="text-muted">Travel Agency Login</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>SIGN IN FAILED (invalid password)</h1>
+
+        <form class="form-signin">
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" name="inputFName" id="inputFName" class="form-control" placeholder="First Name" required autofocus>
+
+        <label for="inputLName" class="sr-only">Last Name</label>
+        <input type="name" name="inputLName" id="inputLName" class="form-control" placeholder="Last Name" required>
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="ID Number" required autofocus>
+
+        <label for="inputAge" class="sr-only">Password</label>
+        <input type="password" name="inputAge" id="inputAge" class="form-control" placeholder="Age" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+
+
+
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+        <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="button">Sign In</button>
+
+      </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

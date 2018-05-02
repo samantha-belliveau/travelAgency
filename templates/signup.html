@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travel Agency</title>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+  	<!-- Icons -->
+  	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  	<!-- Fonts -->
+  	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+  	<!-- Custom styles -->
+  	<link rel="stylesheet" href="../static/assets/css/styles.css">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <style>
+    h2 {
+            color: #ff0000;
+    }
+
+    #SignUp {
+      float: right ;
+      width: 40% ;
+    }
+    #SignIn {
+      float: left;
+      width: 40%;
+    }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/script.js"></script>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/home">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Travel Agency Login</h3>
+      </div>
+
+      {% if error %}
+        <h2>{{error}}</h2>
+      {% endif %}
+
+        <div id="SignUp">
+
+          <h3>Sign Up</h3>
+          <form action = "http://localhost:5000/signUp" method = "POST">
+            <div class="form-group">
+                <input type="name" name="inputFName" id="inputFName" class="form-control" placeholder="First Name" required autofocus>
+            </div>
+            <div class="form-group">
+                <input type="name" name="inputLName" id="inputLName" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="name" name="inputID" id="inputID" class="form-control" placeholder="ID Number" required autofocus>
+              </div>
+              <div class="form-group">
+                <input type="name" name="inputAge" id="inputAge" class="form-control" placeholder="Age" required>
+              </div>
+              <div class="form-group">
+                <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+              </div>
+
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+          </form>
+        </div>
+        <div id="SignIn">
+          <h3>Sign In</h3>
+          <form action = "http://localhost:5000/signIn" method = "POST">
+            <div class="form-group">
+                <input type="name" name="ID" id="ID" class="form-control" placeholder="ID Number" required autofocus>
+            </div>
+            <div class="form-group">
+              <input type="password" name="Password" id="Password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
+          </form>
+
+        </div>
+
+    </div>
+  </body>
+</html>
