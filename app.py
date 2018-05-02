@@ -30,6 +30,18 @@ def main():
 def home():
     return render_template('index.html')
 
+@app.route('/showLoc')
+def getLoc():
+    cursor.execute('SELECT city, state, country FROM location')
+    data = cursor.fetchall() # returns list of tuples
+    return render_template('loc.html',data = data)
+
+@app.route('/srcdst', methods=['POST'])
+def setSourceDest():
+    source = request.form['source']
+    dest = request.form['dest']
+    return render_template('srcdst.html',src=source, dst=dest)
+
 @app.route("/transportation")
 def transportation():
     return render_template('transportation.html')
